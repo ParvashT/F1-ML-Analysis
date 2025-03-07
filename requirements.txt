@@ -1,0 +1,8 @@
+pandas
+numpy
+matplotlib
+seaborn
+sklearn
+folium
+joblib  # If saving ML models
+tensorflow  # If using deep learning
