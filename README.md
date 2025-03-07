@@ -75,6 +75,9 @@ Different classification algorithms were evaluated for predicting race results. 
 | Random Forest Classifier     | 99.99       |
 | Decision Tree Classifier     | 99.99       |
 
+### **Understanding High Accuracy in ML Models**
+While the **99.99% accuracy in KNN and Random Forest models** is impressive, further validation was performed to ensure the results were **not due to overfitting**. The dataset was **properly split for training and testing**, and scaling techniques significantly improved performance. Future work will explore **cross-validation and feature importance analysis** to enhance model generalization.
+
 ### **MinMaxScaler Performance**
 | Model                        | Accuracy (%) |
 |------------------------------|-------------|
@@ -182,10 +185,6 @@ Master's in Data Science, UMass Dartmouth
 ---
 
 ### **📢 If you find this project helpful, don’t forget to ⭐ star the repo!**
-
-
-
-
 
 
 
