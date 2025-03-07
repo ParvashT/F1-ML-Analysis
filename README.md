@@ -2,110 +2,153 @@
 
 ![F1 Championship](https://automobilist.com/cdn/shop/collections/ATM_Collection_OracleRedBullRacing.jpg?v=1700837625&width=2048)
 
-## 🚀 **Project Overview**
-Formula 1 (F1) is a data-driven sport where milliseconds decide the winner. This project explores **F1 race data** using **data science and machine learning** to uncover insights and predict race outcomes. Through data visualization, feature engineering, and ML modeling, we analyze the key factors influencing driver performance and race results.
+## 📌 Project Overview
+Formula 1 (F1) racing is a data-rich sport, and analyzing historical race data can help in predicting future race outcomes. This project applies **Exploratory Data Analysis (EDA)** and **Machine Learning** techniques to analyze and predict F1 race results based on historical data.
 
 ---
 
-## 📂 **Dataset Information**
-The dataset includes:
-- **Race details** – circuits, seasons, results
-- **Driver statistics** – standings, age, experience
-- **Constructor performance** – team success over seasons
-- **Lap times, qualifying results, and finishing positions**
+## 📊 Dataset Information
+- The dataset contains information on **F1 races, drivers, constructors, lap times, results, and standings**.
+- Data preprocessing was performed to handle missing values, convert data types, and filter relevant race records.
+- **Feature Engineering** was applied to extract meaningful insights and improve model performance.
 
 ---
 
-## 🔍 **Feature Engineering & Data Processing**
-🔹 **Data Cleaning & Type Conversions**: Fixed missing values & converted date fields.  
-🔹 **Outlier Detection & Removal**: Addressed skewness and anomalies in driver performance data.  
-🔹 **Encoding Categorical Variables**: Used **Label Encoding** for driver & team names.  
-🔹 **Feature Scaling**: Applied **MinMaxScaler**, **StandardScaler**, and **RobustScaler** for optimized ML performance.
+## 🔬 Project Workflow
+1. **Importing the Data**
+2. **Feature Engineering & Data Preprocessing**
+   - Data type conversions (e.g., converting dates)
+   - Handling missing values
+   - Encoding categorical features (Label Encoding)
+3. **Exploratory Data Analysis (EDA)**
+   - Distribution analysis
+   - Correlation heatmaps
+   - Outlier detection & skewness correction
+4. **Data Visualization**
+   - **F1 Track Map:** Using Folium to visualize race tracks globally
+   - **Heatmaps & Density Plots:** Understanding correlations & distributions
+5. **Machine Learning Models**
+   - Logistic Regression
+   - Decision Trees
+   - Random Forest
+   - K-Nearest Neighbors (KNN)
+   - Gaussian Naïve Bayes
+   - Stochastic Gradient Descent (SGD)
+6. **Model Evaluation & Comparison**
+   - Accuracy comparison of different models
+   - StandardScaler, MinMaxScaler & RobustScaler applied for better performance
 
 ---
 
-## 🛠️ **Techniques, Analysis, Operations & Concepts Used**
-- **Descriptive Statistics**: Used `describe()` to analyze dataset distributions, mean, variance, and percentiles.
-- **Data Visualization**: Implemented **correlation heatmaps**, **distribution plots**, and **track maps** using `seaborn`, `matplotlib`, and `folium`.
-- **Skewness & Normality Check**: Assessed data normality using skewness values (-1 to 1 range) and applied transformations.
-- **Outlier Detection & Removal**: Applied **IQR-based filtering** to handle extreme values affecting ML performance.
-- **Data Filtration**: Filtered datasets based on race completion status to avoid bias.
-- **Encoding Techniques**: Used **Label Encoding** over One-Hot Encoding to efficiently handle categorical data.
-- **Feature Scaling**: Experimented with **MinMaxScaler, StandardScaler, and RobustScaler** to normalize data.
-- **Machine Learning Algorithms**: Implemented and compared **Logistic Regression, KNN, Decision Trees, Random Forest, SVM, Naïve Bayes, and SGD Classifier**.
-- **Hyperparameter Tuning**: Optimized ML models by tweaking hyperparameters to achieve better accuracy.
-- **Model Evaluation Metrics**: Used **accuracy score** to compare different classifiers' performance.
+## 🌍 F1 Track Locations
+The **global F1 race track map** was created using `folium`, showing all circuits used in the dataset.
+
+![Screenshot 2025-03-07 013524](https://github.com/user-attachments/assets/230ceadd-0dcc-412a-88e3-b3e15b05e156)
 
 ---
 
-## 🤖 **Machine Learning Models & Accuracy**
-### **ML Algorithms Used**:
-✔ **Logistic Regression**  
-✔ **Support Vector Machine (SVM)**  
-✔ **Random Forest Classifier**  
-✔ **Decision Tree Classifier**  
-✔ **K-Nearest Neighbors (KNN)**  
-✔ **Naïve Bayes Classifier**  
+## 🔥 Exploratory Data Analysis (EDA) & Feature Engineering
+### **1️⃣ Correlation Heatmap**
+A **heatmap** was generated to show correlations between features.
 
-### **Model Accuracy Comparison**
-| Model | Accuracy |
-|---|---|
-| Logistic Regression | 13.66% |
-| SGD Classifier | 11.47% |
-| KNN | 99.91% |
-| GaussianNB | 93.27% |
-| RandomForest | 99.99% |
-| DecisionTree | 99.99% |
+![bd703dc4-756b-48bc-bfa5-11fb5ec4e85c](https://github.com/user-attachments/assets/23658ac7-e969-49e5-a169-ce59a5f5604d)
+
+
+### **2️⃣ Density Distribution of Key Features**
+Density plots were created to analyze the distribution of features such as lap times, driver standings, positions, and speeds.
+
+![a23a25b7-f400-43e9-8362-ecf1b98b2916](https://github.com/user-attachments/assets/8d110801-057f-41af-8629-54686303def1)
+
 
 ---
 
-## ⚙️ **How to Run the Project**
-### **1️⃣ Install Dependencies**
+## 🤖 Machine Learning Model Performance
+Different classification algorithms were evaluated for predicting race results. Below is a **comparison of model accuracy**:
+
+| Model                        | Accuracy (%) |
+|------------------------------|-------------|
+| Logistic Regression          | 13.66       |
+| SGD Classifier               | 11.47       |
+| K-Nearest Neighbors (KNN)    | 99.91       |
+| Gaussian Naïve Bayes         | 93.27       |
+| Random Forest Classifier     | 99.99       |
+| Decision Tree Classifier     | 99.99       |
+
+
+---
+
+## 📊 Modeling the Data
+Data modeling involved selecting and training multiple machine learning models to predict F1 race results.
+
+![ebf6505a-016c-434b-825d-06942458a7ce](https://github.com/user-attachments/assets/0e2cd34d-cedb-4d80-b665-82b105be9b91)
+
+
+---
+
+## 🔄 Feature Scaling Techniques
+### **1️⃣ MinMaxScaler**
+Each value in a feature is transformed by subtracting the minimum value and dividing by the range (max-min). This scaler **preserves the shape of the original distribution**.
+
+![d356ff52-5788-478c-b3b9-15abe8c71927](https://github.com/user-attachments/assets/e44a301d-aa81-46ae-8ea1-b1c67d042080)
+
+
+### **2️⃣ StandardScaler**
+Removes the mean and scales each feature to unit variance. This method is **sensitive to outliers**.
+
+![21fa9016-9121-413c-9439-455ba4813573](https://github.com/user-attachments/assets/6938c47b-045e-436b-9f4b-081433baf4c4)
+
+
+### **3️⃣ RobustScaler**
+Uses statistics robust to outliers by scaling data based on the **interquartile range (IQR)**.
+
+![64a09056-3527-4d01-b8e6-74f3118752ab](https://github.com/user-attachments/assets/0033854f-bc31-44e1-934b-e387d265b815)
+
+
+---
+
+## 🚀 How to Run This Project
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/ParvashT/F1-ML-Analysis.git
+cd F1-ML-Analysis
+```
+
+### **2️⃣ Install Required Libraries**
 ```bash
 pip install -r requirements.txt
 ```
-### **2️⃣ Run Jupyter Notebook**
+
+### **3️⃣ Run Jupyter Notebook**
 ```bash
 jupyter notebook
 ```
-### **3️⃣ Open & Run**
-- Open `notebooks/f1-champ-eda-classification.ipynb`
-- Execute all cells to reproduce results.
+- Open `notebooks/f1-champ-eda-classification.ipynb` and execute the cells.
 
 ---
 
-## 📌 **Results & Key Takeaways**
-🎯 **F1 race outcomes can be predicted with high accuracy using ML models.**  
-🎯 **Track conditions & driver experience significantly impact race performance.**  
-🎯 **RandomForest & DecisionTree classifiers achieved near-perfect accuracy.**  
-🎯 **Feature scaling & encoding significantly improved model predictions.**  
+## 📌 Key Findings & Insights
+- **KNN and Random Forest performed exceptionally well**, achieving nearly **100% accuracy**.
+- **Logistic Regression & SGD struggled** due to the complexity of F1 race data.
+- **Feature Engineering played a crucial role** in improving model predictions.
+- **Tracks and race locations impact performance significantly**, as seen in our EDA visualizations.
 
 ---
 
-## 🔮 **Future Scope & Enhancements**
-✨ **Expanding the dataset**: Integrating real-time race data for better predictions.  
-✨ **Advanced Deep Learning Models**: Implementing neural networks for improved accuracy.  
-✨ **Weather & Track Conditions**: Including weather impact for dynamic predictions.  
-✨ **Live Race Forecasting**: Developing an interactive dashboard for real-time race predictions.  
-✨ **Driver & Team Performance Analysis**: More granular insights into driver skills & team strategies.  
-✨ **Pit Stop & Strategy Optimization**: Predicting the best pit stop strategies for race success.  
-✨ **Car Performance Metrics**: Incorporating telemetry data to analyze car speed, aerodynamics, and fuel efficiency.  
-✨ **Race Incident Analysis**: Using NLP techniques to analyze commentary and predict race outcomes based on incidents.
+## 📈 Future Scope
+- Fine-tuning models to **reduce overfitting**.
+- Testing with **Deep Learning models** (e.g., Neural Networks).
+- Expanding dataset with **real-time race data** for live predictions.
 
 ---
 
-## 🏆 **Why This Project is Exciting?**
-✅ **Real-world sports analytics application** – Formula 1 is highly data-driven, making it a perfect candidate for ML.  
-✅ **Multi-faceted analysis** – This project explores drivers, teams, circuits, and race conditions for a holistic understanding.  
-✅ **High-accuracy models** – The implemented classifiers provide near-perfect accuracy in race predictions.  
-✅ **Potential for real-time forecasting** – This study can evolve into a **live race prediction model** with streaming data.  
-✅ **Data-driven decision making** – Enhances strategic planning for teams and drivers, improving race outcomes.  
-✅ **Scalability & Future Enhancements** – The model can integrate with IoT sensors and real-time telemetry data for more advanced predictions.  
+## 👨‍💻 Author
+Developed by **Parvash Choudhary Talluri** 🚀🏎️  
+Master's in Data Science, UMass Dartmouth
+
+📌 **GitHub:** [ParvashT](https://github.com/ParvashT)  
+📌 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/parvash-choudhary-talluri)
 
 ---
 
-## ✨ **Author & Contributions**
-👨‍💻 **Parvash Choudhary Talluri**  
-📌 If you found this project useful, **give it a ⭐ on GitHub!** 🚀
+### **📢 If you find this project helpful, don’t forget to ⭐ star the repo!**
 
----
