@@ -65,6 +65,7 @@ Density plots were created to analyze the distribution of features such as lap t
 ## 🤖 Machine Learning Model Performance
 Different classification algorithms were evaluated for predicting race results. Below is a **comparison of model accuracy**:
 
+### **Without Scaling**
 | Model                        | Accuracy (%) |
 |------------------------------|-------------|
 | Logistic Regression          | 13.66       |
@@ -72,6 +73,36 @@ Different classification algorithms were evaluated for predicting race results. 
 | K-Nearest Neighbors (KNN)    | 99.91       |
 | Gaussian Naïve Bayes         | 93.27       |
 | Random Forest Classifier     | 99.99       |
+| Decision Tree Classifier     | 99.99       |
+
+### **MinMaxScaler Performance**
+| Model                        | Accuracy (%) |
+|------------------------------|-------------|
+| Logistic Regression          | 99.96       |
+| SGD Classifier               | 98.64       |
+| Random Forest Classifier     | 99.99       |
+| K-Nearest Neighbors (KNN)    | 99.99       |
+| Gaussian Naïve Bayes         | 99.99       |
+| Decision Tree Classifier     | 99.99       |
+
+### **StandardScaler Performance**
+| Model                        | Accuracy (%) |
+|------------------------------|-------------|
+| Logistic Regression          | 99.99       |
+| SGD Classifier               | 98.87       |
+| Random Forest Classifier     | 99.99       |
+| K-Nearest Neighbors (KNN)    | 99.99       |
+| Gaussian Naïve Bayes         | 99.99       |
+| Decision Tree Classifier     | 99.99       |
+
+### **RobustScaler Performance**
+| Model                        | Accuracy (%) |
+|------------------------------|-------------|
+| Logistic Regression          | 99.99       |
+| SGD Classifier               | 98.99       |
+| Random Forest Classifier     | 99.99       |
+| K-Nearest Neighbors (KNN)    | 99.99       |
+| Gaussian Naïve Bayes         | 99.99       |
 | Decision Tree Classifier     | 99.99       |
 
 
@@ -151,4 +182,20 @@ Master's in Data Science, UMass Dartmouth
 ---
 
 ### **📢 If you find this project helpful, don’t forget to ⭐ star the repo!**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
