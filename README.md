@@ -1,6 +1,6 @@
 # 🏎️ F1 Championship Data Analysis & Machine Learning Predictions
 
-![F1 Championship](https://upload.wikimedia.org/wikipedia/commons/3/33/F1_logo.svg)
+![F1 Championship](https://automobilist.com/cdn/shop/collections/ATM_Collection_OracleRedBullRacing.jpg?v=1700837625&width=2048)
 
 ## 🚀 **Project Overview**
 Formula 1 (F1) is a data-driven sport where milliseconds decide the winner. This project explores **F1 race data** using **data science and machine learning** to uncover insights and predict race outcomes. Through data visualization, feature engineering, and ML modeling, we analyze the key factors influencing driver performance and race results.
